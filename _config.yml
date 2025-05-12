@@ -1,0 +1,40 @@
+
+title: "accidental_artiste"
+description: "A space to share my blogs and artistic photos."
+baseurl: ""
+url: "https://accidental-artiste.github.io"
+
+theme: minimal-mistakes-jekyll
+
+author:
+  name: accidental_artiste
+  avatar: "/assets/images/avatar.png"
+  bio: "Explorer of thoughts & visual stories."
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+collections:
+  gallery:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ""
+      type: "gallery"
+    values:
+      layout: gallery
+
+paginate: 5
+paginate_path: /blog/page:num/
+
+# Google Analytics or other plugins can be added later
